@@ -9,16 +9,16 @@ const Shortener = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const url = inputRef.current.value;
-    const regexUrl =
-      /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/;
+    const regexUrl = /^(http(s)?:\/\/)[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/
     const validateUrl = regexUrl.test(url);
     if (!validateUrl) {
       setTextValidate(url);
       return;
     }
-    const urlShort = await axios.post(`http://localhost:3001`, {
+    const urlShort = await axios.post(``, {
         url,
     })
+    setShortUrl(`${urlShort.config.baseURL}/${urlShort.data.data.codeShort}`);
     console.log(urlShort);
   };
 
@@ -31,6 +31,7 @@ const Shortener = () => {
       </form>
       <button onClick={handleSubmit}>validacion</button>
       <p>{textValidate}</p>
+      <p>este es tu link: <a href={shortUrl}>{shortUrl}</a></p>
     </>
   );
 };
