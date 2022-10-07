@@ -2,6 +2,7 @@ const Urlshort = require('../models/Urlshort');
 
 const createShortUrl = async (req, res) => {
     const { url } = req.body
+    const myUrl = req.hostname
     const urlshort = Math.random().toString(36).substring(2, 12)
 
     try {
@@ -9,6 +10,7 @@ const createShortUrl = async (req, res) => {
             codeShort: urlshort,
             urlOriginal: url
         })
+        console.log(myUrl);
         res.status(201).json({
             ok: true,
             msg: 'se acorto el link correctamente',
