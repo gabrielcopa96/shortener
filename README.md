@@ -1,6 +1,6 @@
 # Shortener
 
-Shortener es una aplicacion web que acorta tus url.
+Shortener es una aplicacion web para acortar tus url, como paginas como [Bit.ly)]([https://www.npmjs.com/](https://bitly.com/)
 
 ## Instalación
 
