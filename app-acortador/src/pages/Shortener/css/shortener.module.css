@@ -4,35 +4,3 @@
   flex-direction: column;
   align-items: center;
 }
-
-.container__data {
-  padding-top: 5rem;
-}
-
-.container__dataurl {
-  font-size: 1.3rem;
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  border: 1px solid #646cff;
-  padding: 2rem;
-  border-radius: 1rem;
-}
-
-@media (max-width: 767px) {
-
-    .container__data {
-        padding-top: 2rem;
-      }
-
-      .container__dataurl {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        font-size: 1rem;
-        border: none;
-        padding: 0;
-        border-top: 1px solid #646cff;
-        border-radius: 0;
-      }
-}
