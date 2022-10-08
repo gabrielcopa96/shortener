@@ -31,6 +31,6 @@ app.use((req, res, next) => {
 app.use('/', require('./app/routes/index.routes'))
 
 
-app.listen(3001, () => {
-    console.log('Server listening on port 3001')
+app.listen(process.env.PORT, () => {
+    console.log(`Server listening on port ${process.env.PORT}`)
 })

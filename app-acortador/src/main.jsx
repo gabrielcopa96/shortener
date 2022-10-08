@@ -4,9 +4,9 @@ import App from './App'
 import './index.css'
 import axios from 'axios'
 
-axios.defaults.baseURL = 'https://shurtener-back.onrender.com' || "http://localhost:3001";
+axios.defaults.baseURL = 'https://short-0j0q.onrender.com' || 'http://localhost:3001';
 
-// 
+//  
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

@@ -1,0 +1,60 @@
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap);
+
+h3 {
+  font-size: 3.5rem;
+  line-height: 90%;
+  transform: rotateX(0) rotateY(-25deg);
+  text-transform: uppercase;
+  width: 600px;
+  text-align: center;
+  color: #646cff;
+  color: #fff;
+  margin: 3rem auto;
+  position: relative;
+  text-shadow: 0 0 5px #646cff, 0 0 10px #646cff, 0 0 15px #646cff, 0 0 20px #646cff,
+    0 0 35px #646cff, 0 0 40px #646cff;
+}
+
+h3 span {
+  display: inline-block;
+  margin-left: 1.1rem;
+}
+
+.scrollMore {
+  color: white;
+  text-align: center;
+  width: 450px;
+  position: absolute;
+  bottom: 1rem;
+  left: calc(50% - 225px);
+  margin: 0 auto;
+  font-size: 25rem;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  font-family: monospace;
+  pointer-events: none;
+  z-index: -1;
+  transform-origin: center;
+  -webkit-animation: bounce 3s cubic-bezier(0.37, 0, 0.21, 1.02) infinite,
+    fonts 5s linear infinite;
+  animation: bounce 3s cubic-bezier(0.37, 0, 0.21, 1.02) infinite,
+    fonts 5s linear infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  to {
+    transform: translateZ(-2px) translateY(5px);
+  }
+
+  40% {
+    transform: rotateY(180deg) translateZ(-2px) translateY(-35px);
+  }
+
+  60% {
+    transform: translateZ(-2px) translateY(-25px);
+  }
+}

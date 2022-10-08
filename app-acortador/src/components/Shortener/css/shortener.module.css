@@ -1,0 +1,52 @@
+.container__main {
+  padding-top: 7rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  gap: 4.5rem;
+  align-items: center;
+  margin: 8rem auto 0 auto;
+  padding: 1rem;
+}
+
+.section__example {
+  text-align: center;
+}
+
+.section__example p {
+  color: #8b8b8b;
+}
+
+.inputUrl {
+  border: none;
+  width: 60%;
+  font-size: 1.1rem;
+  border-radius: 0.45rem;
+  padding: 0.65rem 0.5rem;
+}
+
+.inputUrl:focus {
+  outline: 1px solid #646cff;
+  border: 1px solid #646cff;
+}
+
+.container__data {
+  padding-top: 5rem;
+}
+
+.container__dataurl {
+  font-size: 1.3rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  border: 1px solid #646cff;
+  padding: 2rem;
+  border-radius: 1rem;
+}

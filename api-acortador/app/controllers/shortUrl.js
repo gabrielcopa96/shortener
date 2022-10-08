@@ -14,7 +14,7 @@ const createShortUrl = async (req, res) => {
         res.status(201).json({
             ok: true,
             msg: 'se acorto el link correctamente',
-            data: newUrlShort
+            newUrlShort
         })
     } catch (error) {
         res.status(404).json({

@@ -1,13 +1,12 @@
-import './App.css'
-import Shortener from './components/Shortener'
+import Shortener from "./components/Shortener/Shortener";
 
 function App() {
-
   return (
     <>
+      
       <Shortener />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
