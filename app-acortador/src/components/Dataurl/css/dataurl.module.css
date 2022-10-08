@@ -1,0 +1,13 @@
+.container__data {
+  padding-top: 5rem;
+}
+
+.container__dataurl {
+  font-size: 1.3rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  border: 1px solid #646cff;
+  padding: 2rem;
+  border-radius: 1rem;
+}

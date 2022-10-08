@@ -1,12 +1,7 @@
-import Shortener from "./components/Shortener/Shortener";
+import Shortener from "./pages/Shortener/Shortener";
 
 function App() {
-  return (
-    <>
-      
-      <Shortener />
-    </>
-  );
+  return <Shortener />
 }
 
 export default App;

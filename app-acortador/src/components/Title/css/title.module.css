@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap);
 
 h3 {
   font-size: 3.5rem;
@@ -62,7 +61,6 @@ h3 span {
 @media (max-width: 768px) {
   h3 {
     font-size: 2.5rem;
-    /* line-height: 100%; */
     width: 100%;
   }
 }

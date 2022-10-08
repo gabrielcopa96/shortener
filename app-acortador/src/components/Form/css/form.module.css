@@ -1,0 +1,39 @@
+.form {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  gap: 4.5rem;
+  align-items: center;
+  margin: 8rem auto 0 auto;
+  padding: 1rem;
+}
+
+.inputUrl {
+  border: none;
+  width: 60%;
+  font-size: 1.1rem;
+  border-radius: 0.45rem;
+  padding: 0.65rem 0.5rem;
+}
+
+.inputUrl:focus {
+  outline: 1px solid #646cff;
+  border: 1px solid #646cff;
+}
+
+@media (max-width: 767px) {
+  .form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5rem;
+    padding: 0;
+    margin: 8rem auto 0 auto;
+  }
+
+  .inputUrl {
+    width: 90%;
+  }
+}
