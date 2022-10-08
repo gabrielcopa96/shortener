@@ -15,6 +15,13 @@ Usando el paquete [yarn](https://yarnpkg.com/).
 yarn install
 ```
 
+## Endpoints - Api
+
+```bash
+ # [POST] - https://short-0j0q.onrender.com/ -> y recibe por body { url: 'http://example.com' }
+ # [GET] - https://short-0j0q.onrender.com/:IdUrlShort -> recibe por params el id, y todo junto te redirecciona a la url original
+```
+
 ## Deployment
-[BACKEND](https://short-0j0q.onrender.com/) \
+[BACKEND](https://short-0j0q.onrender.com/) - Api que se consume para realizar el acortamiento de url \
 [FRONTEND](https://shortenerweb.vercel.app/)
