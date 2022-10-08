@@ -4,6 +4,8 @@ import App from './App'
 import './index.css'
 import axios from 'axios'
 
+// const URL = process.env.API_URL || 'https://short-0j0q.onrender.com';
+
 axios.defaults.baseURL = 'https://short-0j0q.onrender.com' || 'http://localhost:3001';
 
 //  

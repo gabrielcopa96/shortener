@@ -9,7 +9,6 @@ import styles from "./css/shortener.module.css";
 
 import Swal from "sweetalert2";
 
-import Toastify from 'toastify-js'
 
 import Loading from "../Loading/Loading";
 import Title from "../Title/Title";
@@ -62,7 +61,7 @@ const Shortener = () => {
       .post("", { url })
       .then(({ data, config }) => {
         console.log("mi data", data);
-        setShortUrl(`${config.baseURL}/${data.data.codeShort}`);
+        setShortUrl(`${config.baseURL}/${data.newUrlShort.codeShort}`);
         setLoading(false);
       })
       .catch((err) => {
