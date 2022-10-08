@@ -16,5 +16,5 @@ yarn install
 ```
 
 ## Deployment
-[BACKEND](https://short-0j0q.onrender.com/)
+[BACKEND](https://short-0j0q.onrender.com/) \
 [FRONTEND](https://shortenerweb.vercel.app/)
