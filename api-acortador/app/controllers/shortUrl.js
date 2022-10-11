@@ -2,15 +2,16 @@ const Urlshort = require('../models/Urlshort');
 
 const createShortUrl = async (req, res) => {
     const { url } = req.body
-    const myUrl = req.hostname
-    const urlshort = Math.random().toString(36).substring(2, 12)
+    // const myUrl = req.hostname
+    const urlshort = Math.random().toString(36).substring(2, 12)// 0.94504594359345934 -> '0.f59b4' a - z
 
+    // 94fd0sfs43fsd3z
     try {
         const newUrlShort = await Urlshort.create({
             codeShort: urlshort,
             urlOriginal: url
         })
-        console.log(myUrl);
+        // console.log(myUrl);
         res.status(201).json({
             ok: true,
             msg: 'se acorto el link correctamente',

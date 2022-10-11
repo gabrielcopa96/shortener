@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import axios from "axios";
 
@@ -9,10 +9,13 @@ import Toast from "../shared/Toast";
 import validateUrl from "../../services/validateUrl";
 
 import styles from "./css/form.module.css";
+import useWidth from "../../hooks/useWidth";
 
 const Form = ({ setLoading, setShortUrl }) => {
   
   const inputRef = useRef();
+  
+  const { width } = useWidth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,16 +26,16 @@ const Form = ({ setLoading, setShortUrl }) => {
     const validate = validateUrl(url);
 
     if (url.length === 0) {
-      return Toast("error", "No escribiste ninguna url");
+      return Toast("error", "No escribiste ninguna url", width);
     }
 
     if (!validate) {
       inputRef.current.value = "";
-      return Toast("info", "la url no es valida");
+      return Toast("info", "la url no es valida", width);
     }
 
     //Seteo a true para que se renderice mi loading
-    setLoading(true);
+    setLoading(true); //false
 
     //Me aseguro de limpiar el contenedor que muestra la url acortada
     setShortUrl("");
@@ -49,13 +52,13 @@ const Form = ({ setLoading, setShortUrl }) => {
       })
       .catch((err) => {
         //Devuelvo una alerta de que no se logro acortar la url
-        Toast('error', 'Nose se logro acortar la url');
+        Toast('error', 'Nose se logro acortar la url', width);
         //Cambio el estado de loading, para que no se siga renderizando
         setLoading(false);
       });
 
     inputRef.current.value = "";
-    return Toast("success", "La url se ha acortado correctamente");
+    return Toast("success", "La url se ha acortado correctamente", width);
   };
 
   return (
